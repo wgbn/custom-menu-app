@@ -1,0 +1,58 @@
+<div class="app-menu">
+
+  <div class="menu-curto">
+
+    <div class="icone home" (click)="menuClick(1)"><i class="fa fa-home"></i></div>
+    <div class="icone bookmark" (click)="menuClick(2)"><i class="fa fa-bookmark"></i></div>
+    <div class="icone blog" (click)="menuClick(3)"><i class="fa fa-medium"></i></div>
+    <div class="icone music" (click)="menuClick(4)"><i class="fa fa-music"></i></div>
+    <div class="icone email" (click)="menuClick(5)"><i class="fa fa-envelope"></i></div>
+    <div class="spacer"></div>
+    <div class="icone power"><i class="fa fa-power-off"></i></div>
+
+  </div>
+
+  <div class="menu-aberto" [ngSwitch]="active" [ngClass]="{'opened': menuOpened}">
+
+    <div class="sub-menu home" *ngSwitchCase="1">
+      <a (click)="menuClick(1)">Opção um aqui</a>
+      <a (click)="menuClick(1)">Opção dois aqui</a>
+      <a (click)="menuClick(1)">Opção três aqui</a>
+      <a (click)="menuClick(1)">Opção quatro aqui</a>
+    </div>
+
+    <div class="sub-menu bookmark" *ngSwitchCase="2">
+        <a (click)="menuClick(2)">Opção um aqui</a>
+        <a (click)="menuClick(2)">Opção dois aqui</a>
+        <a (click)="menuClick(2)">Opção três aqui</a>
+        <a (click)="menuClick(2)">Opção quatro aqui</a>
+    </div>
+
+    <div class="sub-menu blog" *ngSwitchCase="3">
+        <a (click)="menuClick(3)">Opção um aqui</a>
+        <a (click)="menuClick(3)">Opção dois aqui</a>
+        <a (click)="menuClick(3)">Opção três aqui</a>
+        <a (click)="menuClick(3)">Opção quatro aqui</a>
+    </div>
+
+    <div class="sub-menu music" *ngSwitchCase="4">
+        <a (click)="menuClick(4)">Opção um aqui</a>
+        <a (click)="menuClick(4)">Opção dois aqui</a>
+        <a (click)="menuClick(4)">Opção três aqui</a>
+        <a (click)="menuClick(4)">Opção quatro aqui</a>
+    </div>
+
+    <div class="sub-menu email" *ngSwitchCase="5">
+        <a (click)="menuClick(5)">Opção um aqui</a>
+        <a (click)="menuClick(5)">Opção dois aqui</a>
+        <a (click)="menuClick(5)">Opção três aqui</a>
+        <a (click)="menuClick(5)">Opção quatro aqui</a>
+    </div>
+
+  </div>
+
+  <div class="area-app">
+    <ng-content></ng-content>
+  </div>
+
+</div>
