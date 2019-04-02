@@ -52,13 +52,13 @@
 
     .menu-aberto {
         width: 100vw;
-        height: 100vh;
+        height: 10px;
         position: fixed;
         left: -101vw;
         top: 0;
         z-index: 50;
 
-        transition: left .3s;
+        transition: left .3s, height .5s;
 
         .sub-menu {
             height: 100%;
@@ -81,6 +81,7 @@
 
     .opened {
         left: 0;
+        height: 100vh;
     }
 
     .area-app {
